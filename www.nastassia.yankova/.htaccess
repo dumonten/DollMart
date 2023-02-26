@@ -1,0 +1,11 @@
+<FilesMatch "no_permission.html">
+	Require all denied
+</FilesMatch>
+
+ErrorDocument 404 /no_exist.html
+
+<Files "custom_404.html">
+	<If "-z %{ENV:REDIRECT_STATUS}">
+		RedirectMatch 404 ^/custom_404.html$
+	</If>
+</Files>
