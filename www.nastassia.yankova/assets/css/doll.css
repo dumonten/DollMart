@@ -25,12 +25,13 @@
     background-position: center;
     background-size:contain;
     
-    height: 100vh;
+    height: fit-content;
   }
   
   .doll .container {
     margin: 100px 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
   }
