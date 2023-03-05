@@ -1,7 +1,81 @@
 <html>
     <head>
         <title>Authorization</title> 
+        <link rel="stylesheet" href="./assets/css/authorization.css">
+        <link rel="stylesheet" href="./assets/css/header.css">
+        <link rel="stylesheet" href="./assets/css/iconsfont.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Open+Sans:wght@500&family=Roboto:wght@300&family=Tilt+Neon&family=Tilt+Warp&display=swap" rel="stylesheet">
     </head>
     <body>
+        <header class="header">
+            <div class="container">
+                <div class="header-line">
+                    <div class="header-logo">               
+                        <a href="./index.html#main"><img src="./assets/images/icon.png"  id="_img_logo" alt=""></a>
+                    </div>
+                    <nav>
+                        <div id="header-topnav" class="topnav responsive">
+                            <a href="./index.html#main" class="nav-item">Main</a>
+                            <a href="./index.html#page-list" class="nav-item">Categories</a>
+                            <a href="./index.html#page" class="nav-item">Received recently</a>
+                        </div>
+                    </nav>   
+                    
+                    <div class="right-align">
+                        <div class="cart">
+                            <a href="#" id="_img_cart" class="fa-solid fa-basket-shopping"></a>
+                        </div>
+                        <div class="phone">
+                            <div class="phone-holder">
+                                <a id="_img_phone" class="fa-solid fa-phone-volume"></a>
+                                <div class="number">
+                                    <a href="#" class="num">+375-44-552-31-23</a> 
+                                </div>
+                            </div>
+                             <div class="phone-text">Contact us to order</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="card">
+            <div class="container">
+                <div class="inner-box" id="one-card">
+                    <div class="card-front">
+                        <h2>Login</h2>
+                        <form>
+                            <input  type="email"    class="input-box" placeholder="Your email id" required>
+                            <input  type="password" class="input-box" placeholder="Password" required>
+                            <button type="submit"   class="submit-btn">Submit</button>
+                        </form>
+                        <button type="button" class="btn" onclick="openRegister()">I'm a new here</button>
+                        <a href="#">Forgot password</a>
+                    </div>
+                    <div class="card-back">
+                         <h2>Register</h2>
+                        <form>
+                            <input  type="text"     class="input-box" placeholder="Your name" required>
+                            <input  type="email"    class="input-box" placeholder="Your email id" required>
+                            <input  type="password" class="input-box" placeholder="Password" required>
+                            <button type="submit"   class="submit-btn">Submit</button>
+                        </form>
+                        <button type="button" class="btn" onclick="openLogin()">I have an account</button>
+                        <a href="#">Forgot password</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var card = document.getElementById("one-card");
+            function openRegister() {
+                card.style.transform = "rotateY(-180deg)"; 
+            }
+            function openLogin() {
+                card.style.transform = "rotateY(0deg)"; 
+            }
+        </script> 
     </body>
 </html>
