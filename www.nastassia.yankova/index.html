@@ -1,12 +1,159 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">    
+        
+        <title>Monster high</title>
+
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/iconsfont.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Open+Sans:wght@500&family=Roboto:wght@300&family=Tilt+Neon&family=Tilt+Warp&display=swap" rel="stylesheet">
+    </head>
     <body>
-        <h1>Lorem Ipsum</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan ex sed fringilla vehicula. Vivamus semper mi varius cursus rutrum. Duis elementum lacinia ligula fringilla interdum. Mauris porttitor nisi sem, consequat malesuada nibh ultricies et. Maecenas commodo tellus risus. Nam at magna ultrices, lobortis magna in, pellentesque erat. Donec convallis iaculis ligula efficitur venenatis.<br>
-            <br>Praesent egestas ultrices rhoncus. Nullam sed orci in tellus luctus malesuada. Donec scelerisque rutrum sodales. Maecenas et feugiat ex. Maecenas in est neque. Quisque eget lacus nisi. Quisque tristique enim vel diam commodo, eget porta quam consectetur. Nulla dapibus, nisi et pulvinar tempor, urna lectus mattis magna, at rutrum leo augue sed dui. Maecenas libero purus, vestibulum vel velit a, venenatis feugiat ipsum.<br>
-            <br>Donec euismod auctor diam, quis commodo justo fringilla sit amet. Morbi sed sem vitae augue accumsan pulvinar at vel quam. Aliquam erat volutpat. Cras neque orci, ornare vel ante ut, varius efficitur leo. Nullam nec varius nunc. Phasellus posuere pharetra eros, nec consequat sem facilisis in. Suspendisse consequat ac mi vel molestie. Vivamus hendrerit enim non venenatis blandit. Duis non nunc mauris. Cras tempus porttitor neque ut tincidunt. Mauris pellentesque vitae turpis sit amet porttitor. Pellentesque lobortis nisl eu dolor elementum gravida. Nullam mollis lectus eu nunc suscipit posuere vitae ut purus. Quisque tempor velit eu quam egestas lacinia.<br>
-            <br>Sed sed laoreet justo. Donec fermentum eu neque ac sagittis. Cras tincidunt tellus nisl, nec efficitur turpis placerat vel. Maecenas eu metus tincidunt, ullamcorper ligula vel, feugiat mauris. Donec commodo est ut odio molestie, non volutpat mauris venenatis. Nullam scelerisque rutrum massa, nec blandit quam rutrum a. Phasellus faucibus, mauris vel sodales dapibus, turpis mi gravida nunc, et tempor augue neque ac leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-            <br>Vestibulum condimentum felis eu posuere dictum. Maecenas efficitur ex quis libero gravida, sit amet hendrerit leo auctor. Nulla vitae malesuada leo, nec consequat metus. Nam interdum egestas suscipit. Donec odio sem, iaculis eu diam eget, volutpat gravida tortor. Sed posuere diam lacus, non ultricies enim posuere nec. Praesent mattis convallis mollis. Donec mi nulla, vestibulum id vulputate eget, maximus in nulla. Suspendisse ut leo nulla. Sed faucibus nec lorem in sodales. Mauris commodo ex diam, imperdiet scelerisque nisl tempus eget.<br>
+        <header class="header">
+            <div class="container">
+                <div class="header-line">
+                    <div class="header-logo">               
+                        <a href="#main"><img src="./assets/images/icon.png"  id="_img_logo" alt=""></a>
+                    </div>
+                    <nav>
+                        <div id="header-topnav" class="topnav responsive">
+                            <a href="#main" class="nav-item">Main</a>
+                            <a href="#page-list" class="nav-item">Categories</a>
+                            <a href="#page" class="nav-item">Received recently</a>
+                            <a href="#about" class="nav-item">About us</a>
+                            <a href="#" class="fa-solid fa-heart nav-item"></a>
+                            <a href="#" class="fa-solid fa-user nav-item"></a>
+                        </div>
+                    </nav>   
+                    
+                    <div class="right-align">
+                        <div class="cart">
+                            <a href="#" id="_img_cart" class="fa-solid fa-basket-shopping"></a>
+                        </div>
+                        <div class="phone">
+                            <div class="phone-holder">
+                                <a id="_img_phone" class="fa-solid fa-phone-volume"></a>
+                                <div class="number">
+                                    <a href="#" class="num">+375-44-551-31-23</a> 
+                                </div>
+                            </div>
+                             <div class="phone-text">Contact us to order</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="wrapper">
+            <section class="main" id="main">
+                <div class="main-inner">
+                    <div class="_main_left_">
+                        <div class="_main_text_">
+                            <h1>BUY TODAY!</h1>
+                            <p>New collection: Monster high G3 dolls</p>
+                        </div>
+                        <div class="button-container">
+                            <a href="#catalog" class="button button-property">Go to the catalog</a>
+                        </div>
+                    </div>
+                    <div class="_main_right_">
+                        <img src="assets/images/main.jpg"  id="_img_main" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="page-light" id="page-list">
+                <div class="collection">
+                    <div class="collection-item collection-g1">
+                        <h2 class="collection-title">G1 collection</h2>
+                        <div class="collection-img"><img src="./assets/images/g1.jpg"></div>
+                        <div class="button-container">
+                            <a href="" class="button button-property">Go to</a>
+                        </div>
+                    </div>
+                    <div class="collection-item collection-g2">
+                        <h2 class="collection-title">G2 collection</h2>
+                        <div class="collection-img"><img src="./assets/images/g2.jpg"></div>
+                        <div class="button-container">
+                            <a href="" class="button button-property">Go to</a>
+                        </div>
+                    </div>
+                    <div class="collection-item collection-g3">
+                        <h2 class="collection-title">G3 collection</h2>
+                        <div class="collection-img"><img src="./assets/images/g3.jpg"></div>
+                        <div class="button-container">
+                            <a href="" class="button button-property">Go to</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page" id="page">
+                <div class="product">
+                    <div class="product-item">
+                         <img src="./assets/images/product-1.jpg" alt="product 1">
+                         <a href="#" class="product-title">Monster High Draculaura Doll<br>With Pet And Accessories</a>
+                         <p class="product-price">$24.99</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="./assets/images/product-2.jpg" alt="product 2">
+                        <a href="#" class="product-title">Monster High Lagoona Blue Doll<br>With Pet And Accessories</a>
+                        <p class="product-price">$24.99</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="./assets/images/product-3.jpg" alt="product 3">
+                        <a href="#" class="product-title">Monster High Frankie Stein Doll<br>With Pet And Accessories</a>
+                        <p class="product-price">$24.99</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="./assets/images/product-4.jpg" alt="product 4">
+                        <a href="#" class="product-title">Monster High Cleo De Nile Doll<br>With Pet And Accessories</a>
+                        <p class="product-price">$24.99</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="./assets/images/product-5.jpg" alt="product 5">
+                        <a href="#" class="product-title"> Monster High Clawdeen Wolf Doll<br>With Pet And Accessories </a>
+                        <p class="product-price">$24.99</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="./assets/images/product-6.jpg" alt="product 6">
+                        <a href="#" class="product-title">Monster High Deuce Gorgon Doll<br>With Pet And Accessories</a>
+                        <p class="product-price">$24.99</p>
+                    </div>
+                </div>
+            </section>
+            <section class="about" id="about">
+                <div class="about-inner">
+                    <h6>Dolls in my heart</h6>
+                    <div class="divider"></div>
+                    <p>This site is not commercial or official<br>It was created as part of a laboratory assignment for the discipline "Web Technologies" in 2023<br>All prices and products are real<br>But the purchase/sale process is not implemented on this site</p>
+                    <img src="./assets/images/scull.png" id="_img_scull">
+                </div>
+            </section>
+            <footer id="footer">
+                <div class="fdiv">
+                    <p class="fdiv_header">Opening Hours</p>
+                    <div class="fdiv_divider"></div>
+                    <p class="fdiv_text"><i>Mon-Thu:</i> 7:00am-8:00pm<br><i>Fri-Sun:</i> 7:00am-10:00pm</p>
+                    <div class="fdiv_icons">
+                        <a href="https://www.mastercard.us/en-us.html" target="_blank" class="fa-brands fa-cc-mastercard ficon"></a>
+                        <a href="https://usa.visa.com/" target="_blank" class="fa-brands fa-cc-visa ficon"></a>
+                        <a href="https://www.paypal.com/" target="_blank" class="fa-brands fa-cc-paypal ficon"></a>
+                        <a href="https://www.discover.com/" target="_blank" class="fa-brands fa-cc-discover ficon"></a>
+                    </div>
+                </div>
+                <div class="fdiv">
+                    <p class="fdiv_header">Locationof our store</p>
+                    <div class="fdiv_divider"></div>
+                    <p class="fdiv_text"><i>Borisov</i><br>50 years of the BSSR street</p>
+                    <div class="fdiv_icons">
+                        <a href="https://www.facebook.com/" target="_blank" class="fa-brands fa-facebook-f ficon"></a>
+                        <a href="https://www.youtube.com/" target="_blank" class="fa-brands fa-youtube ficon"></a>
+                        <a href="https://twitter.com/?lang=ru" target="_blank" class="fa-brands fa-twitter ficon"></a>
+                        <a href="https://trello.com/" target="_blank" class="fa-brands fa-trello ficon"></a>
+                    </div>
+            </footer>
+        </div>
     </body>
 </html>
