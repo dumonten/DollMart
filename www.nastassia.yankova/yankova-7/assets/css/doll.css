@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  body {
+    background-color: black;
+  }
+
+  .doll {
+    background: black;
+   
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+    background-position: center;
+    background-size:contain;
+    
+    height: fit-content;
+  }
+  
+  .doll .container {
+    margin: 100px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .photos-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .small-group-photos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .small-photo {
+    margin: 10px 0;
+    padding: 7px;
+    background-color: rgba(166, 0, 116, 0.582);
+    width: 100px;
+    height: auto;
+  }
+
+  .main-photo {
+    padding: 10px;
+    background-color: rgba(166, 0, 116, 0.582);
+    height: 500px;
+    width: auto;
+  }
+  
+  .description-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+  }
+
+  .product-name {
+    padding: 30px 0;
+    color: white;
+    text-align: center;
+    font-family: 'Tilt Neon', cursive;
+    font-weight: bold;
+    font-size: 30px; 
+  }
+
+  .header-description {
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .description-section .about {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+  }
+
+  ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: white; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+
+  .description-section li {
+    padding: 10px 30px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+  }
+
+  .product-price {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .buy-section {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  .buy-section p {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    padding-right: 10px;
+  }
+
+  input {
+    width: 100px;
+  }
+
+
+  button {
+    width: 300px;
+    background: rgb(166, 0, 116, 0.5); 
+    border: 1px solid #d40074; 
+    margin: 35px 0 10px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+
+    color: white;
+    font-family: 'Tilt Neon', cursive;
+    font-weight: lighter;
+    font-size: 15px;
+  }
+  
+  button:hover {
+    color: #d40074;
+  }
+
+  button {
+    align-self: center;
+  }
+  
+  footer {
+    border-top: 1px solid white;
+  }
+

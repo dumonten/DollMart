@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="container">
+        <div class="inner-box" id="one-card">
+            <div class="card-front">
+                <h2>Login</h2>
+                <form action="../authorization.php" method="post">
+                    <input  type="text"    name="email"    class="input-box" placeholder="Your email id">
+                    <input  type="password" name="password" class="input-box" placeholder="Password">
+                    <button type="submit"   value="submit"  class="submit-btn">Submit</button>
+                    <input type="text" name="flag" class="flag" value="login">
+                </form>
+                <button type="button" class="btn" onclick="openRegister()">I'm a new here</button>
+                <a href="#">Forgot password</a>
+            </div>
+            <div class="card-back">
+                 <h2>Register</h2>
+                <form action="../authorization.php" method="post">
+                    <input  type="text"     name="text"     class="input-box" placeholder="Your name">
+                    <input  type="text"    name="email"    class="input-box" placeholder="Your email id">
+                    <input  type="password" name="password" class="input-box" placeholder="Password">
+                    <button type="submit"   value="submit"  class="submit-btn">Submit</button>
+                    <input type="text" name="flag" class="flag" value="register">
+                </form>
+                <button type="button" class="btn" onclick="openLogin()">I have an account</button>
+                <a href="#">Forgot password</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var card = document.getElementById("one-card");
+    function openRegister() 
+    {
+        card.style.transform = "rotateY(-180deg)"; 
+    }
+    function openLogin() 
+    {
+        card.style.transform = "rotateY(0deg)"; 
+    }
+</script> 

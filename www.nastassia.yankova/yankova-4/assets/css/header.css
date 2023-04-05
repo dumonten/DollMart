@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /*-------------------------->> header */
+  
+ .header .container
+  {
+    margin: 0px 90px;
+  }
+
+  .header {
+    box-shadow: inset 0 90px 20px -10px rgba(0,0,0,0.4);
+    height: 110px;
+    background-size: cover;
+    
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    position: fixed;
+  }
+
+  #_img_logo {
+    width: auto;
+    height: 100px;
+  }
+  
+  .header-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Tilt Warp', cursive;
+  }
+  
+  
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+  
+    margin-right: 25px;
+    text-transform: uppercase;
+    transition: color 0.3 linear;
+  }
+  
+  .nav-item:hover {
+    color: #d40074; 
+  }
+  
+  #numInBasket
+  {
+    color: #d40074; 
+    font-weight: 700;
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  
+  #_img_cart {
+    position: absolute;
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    top: 18px; 
+    right: 7px;
+  } 
+  
+  #_img_cart:hover {
+    color: #d40074; 
+  }
+  
+  
+  .cart {
+    position: relative;
+    border-right: 2px solid white;
+    padding-right: 30px;
+    height: 50px;
+    justify-content: end;
+  }
+  
+  #_img_phone {
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+  }
+  
+  .num {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .num:hover {
+    color:#d40074; 
+  }
+
+  .phone {
+    margin-left: 20px;
+  }
+  
+  .phone-text {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .phone-holder {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-align {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  @media screen and (max-width: 1250px) {
+    .right-align {
+      display: none;
+    }
+
+    .topnav a{
+      display: none;
+    }
+  }
+
