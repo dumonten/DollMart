@@ -71,7 +71,7 @@ function setCSS(&$page, $css_paths)
     $page = str_replace('{stylesheets_adding}', $stylesheets_adding, $page);
 }
 
-function setProductItem($product_photo_path, $product_item_value, $product_item_name, $product_price)
+function setProductItem($product_item_value, $product_item_name, $product_price, $product_photo_path)
 {
     $main = file_get_contents("./content/product_item.html");
     $main = str_replace('{product-photo-path}',   $product_photo_path, $main);
@@ -95,9 +95,17 @@ function function_alert($message)
     echo "<script>alert('$message');</script>";
 }
 
-function savePersonalData($text, $email, $password)
+function connectToDb($dsn, $login, $password)
 {
-    $file = fopen("bd.txt", "a") or die("Unable to open file!");
-    fwrite($file, $text." ".$email." ".$password."\n");
-    fclose($file);
+    try
+    {
+        $dbh = new PDO($dsn, $login,  $password, 
+                        array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+    }
+    catch(PDOException $e) 
+    {
+        echo "Error: data base isn't found."; 
+        return null; 
+    }
+    return $dbh;
 }

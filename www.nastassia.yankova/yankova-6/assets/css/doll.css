@@ -119,11 +119,12 @@
 
   .buy-section {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding-top: 40px;
   }
 
-  .buy-section p {
+  #pnum-label {
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
@@ -134,12 +135,13 @@
     width: 100px;
   }
 
-
   button {
-    width: 300px;
+    width: fit-content;
+    margin: 35px 30px;
+    
     background: rgb(166, 0, 116, 0.5); 
     border: 1px solid #d40074; 
-    margin: 35px 0 10px;
+    
     height: 40px;
     border-radius: 20px;
     padding: 0 10px;
@@ -165,3 +167,6 @@
     border-top: 1px solid white;
   }
 
+  #form-product-name {
+    display: none;
+  }

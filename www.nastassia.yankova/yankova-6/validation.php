@@ -3,7 +3,7 @@
 $special_characters = "\!\#\$\%\&\'\*\+\-\/\=\?\^\_\`\{\|\}\~\.";
 $character = "a-z0-9"; 
 $pattern_mail = "/^[{$character}{$special_characters}]+@([{$character}\-]+\.)+[{$character}]{2,6}$/i";
-$pattern_text = "/^[a-zA-z\-]+$/x";
+$pattern_text = "/^[a-zA-z\-\x20]+$/";
 
 function isValidateEmail($email)
 {

@@ -27,7 +27,23 @@ if (!empty($_POST))
         if (isValidateText($text) && isValidateEmail($email) && $password != "")
         {
             function_alert("You are registred.");
-            savePersonalData($text, $email, $password);
+            try
+            {
+                $dbh = connectToDb('mysql:host=localhost;dbname=dolls', 'root',  '0001'); 
+                if (!$dbh) exit();
+                $password = hash("sha256", $password);
+                $sth = $dbh->prepare("INSERT INTO `usersInformation` SET `User name` = :user_name, `User email` = :user_email, `User password` = :user_password");
+                $sth->bindParam(':user_name',       $text,      PDO::PARAM_STR);
+                $sth->bindParam(':user_email',      $email,     PDO::PARAM_STR);
+                $sth->bindParam(':user_password',   $password,  PDO::PARAM_STR);
+                $sth->execute();
+            }
+            catch(Exception $e)
+            {
+                echo $e->getMessage(); 
+                exit();  
+            }
+
         }
         else
         {
