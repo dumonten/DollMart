@@ -44,8 +44,9 @@
     font-family: 'Tilt Warp', cursive;
   }
   
-  
   .nav-item {
+    display: flex;
+    align-items: center;
     color: white;
     text-decoration: none;
     font-weight: 700;
@@ -53,6 +54,7 @@
   
     margin-right: 25px;
     text-transform: uppercase;
+    text-align: center;
     transition: color 0.3 linear;
   }
   
@@ -70,18 +72,13 @@
   
   #_img_cart {
     position: absolute;
-    color: white;
+    color: #d40074; 
     font-weight: 700;
     font-size: 17px;
     top: 18px; 
     right: 7px;
   } 
-  
-  #_img_cart:hover {
-    color: #d40074; 
-  }
-  
-  
+
   .cart {
     position: relative;
     border-right: 2px solid white;
@@ -125,6 +122,24 @@
     display: flex;
     align-items: center;
     justify-content: end;
+  }
+
+  #quit-form {
+    display: block;
+  }
+
+  .quit-btn {
+    width: fit-content;
+    background: transparent; 
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #d40074;
+    padding: 4px;
+  }
+
+  #header-topnav {
+    display: flex;
   }
 
   @media screen and (max-width: 1250px) {

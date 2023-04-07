@@ -1,0 +1,39 @@
+<?php
+
+include "functions.php"; 
+
+if(!cookiesAreSet())
+{
+    echo "You're not logged.";
+    exit(); 
+}
+
+try
+{
+    $dbh = connectToDb('mysql:host=localhost;dbname=dolls', 'root',  '0001'); 
+    if (!$dbh) exit();
+    $sth = $dbh->prepare("UPDATE `basketsInformation` SET `Num of product` = :pnum WHERE `User ID` = :cookieID, `Name of product`=:pname");
+    $sth->bindValue(':cookieID',     $_COOKIE['id'],  PDO::PARAM_INT);
+    $sth->bindValue(':pname', $_POST['product-name'], PDO::PARAM_STR);
+    $sth->bindValue(':pnum',  $_POST['product-num'],  PDO::PARAM_STR);
+    try
+    {
+        $sth->execute();
+    } 
+    catch(Exception $e)
+    {
+        $sth = $dbh->prepare("INSERT INTO `basketsInformation` SET `User ID` = :cookieID, `Name of product`=:pname, `Num of product` = :pnum");
+        $sth->bindValue(':cookieID',     $_COOKIE['id'],  PDO::PARAM_INT);
+        $sth->bindValue(':pname', $_POST['product-name'], PDO::PARAM_STR);
+        $sth->bindValue(':pnum',  $_POST['product-num'],  PDO::PARAM_STR);
+        $sth->execute();
+    }
+}
+catch(Exception $e)
+{
+    echo $e->getMessage(); 
+    exit();  
+}
+
+header("Location: index.php#page");
+

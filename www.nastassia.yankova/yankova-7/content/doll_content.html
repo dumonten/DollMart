@@ -1,12 +1,12 @@
 <div class="doll">
     <div class="container">
         <div class="photos-section">
-            <img class="main-photo" src= {main-photo} alt="">
+            <img class="main-photo" src= '{main-photo}' alt="">
             <div class="small-group-photos">
-                <img class="small-photo" src= {small-photo} alt="">
-                <img class="small-photo" src= {small-photo} alt="">
-                <img class="small-photo" src= {small-photo} alt="">
-                <img class="small-photo" src= {small-photo} alt="">
+                <img class="small-photo" src= '{small-photo}' alt="">
+                <img class="small-photo" src= '{small-photo}' alt="">
+                <img class="small-photo" src= '{small-photo}' alt="">
+                <img class="small-photo" src= '{small-photo}' alt="">
             </div>
         </div>
         <div class="description-section">
@@ -19,11 +19,12 @@
                 {about-list}
             </ul>
             <p class="product-price"> {price}  </p>
-            <div class="buy-section">
-                <p>Add to card: </p>
-                <input type="number" value="1">
-            </div>
-            <button>Add to Cart</button>
+            <form action="../purchases.php" method="post" id="buy-section">
+                <label id="pnum-label">Add to cart:</label> 
+                <input  type="text"   name="product-name" id="form-product-name" value='{product-title}'>
+                <input  type="number" name="product-num"  id="form-product-num"  value="1">
+                <button type="submit">Add to Cart</button>
+            </form>            
         </div>
     </div>
 </div>

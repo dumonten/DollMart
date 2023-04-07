@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  body {
+    background-color: black;
+  }
+
+  .contacts {
+    background: black;
+   
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+    background-position: center;
+    background-size:contain;
+    
+    height: fit-content;
+  }
+  
+  .contacts .container {
+    margin: 100px 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: fit-content;
+  }
+
+  #header-label {
+    margin: 25px 0;
+    color: #d40074;
+    font-family: 'Tilt Neon', cursive;
+    font-weight: bold;
+    font-size: 30px; 
+  }
+
+  #notice-label {
+    margin: 10px 0;
+    color: #f3f3f3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+  }
+
+  .btnSubmit {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+  }
+
+  button {
+    width: fit-content;
+    background: rgb(166, 0, 116, 0.5); 
+    border: 1px solid #d40074; 
+    
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+
+    color: white;
+    font-family: 'Tilt Neon', cursive;
+    font-weight: lighter;
+    font-size: 15px;
+  }
+  
+  button:hover {
+    color: #d40074;
+  }
