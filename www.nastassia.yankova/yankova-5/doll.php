@@ -2,18 +2,23 @@
 
 include 'functions.php';
 
-try
-{
+/*
+* Connecting to the database to get information about: 
+* - every doll for it personal buy-page
+*/
+try {
     $dbh = connectToDb('mysql:host=localhost;dbname=dolls', 'root',  '0001'); 
     if (!$dbh) exit();
-    $product_name = $_GET['product-name'];
+    
+    $product_name = $_POST['product-name'];
+    
     $sth = $dbh->prepare("SELECT * FROM `dollsInformation` WHERE `Doll name` = :product_name");
     $sth->bindParam(':product_name', $product_name, PDO::PARAM_STR);
     $sth->execute();
+    
     $data = $sth->fetch(PDO::FETCH_ASSOC);
 }
-catch(Exception $e)
-{
+catch(Exception $e) {
     echo $e->getMessage(); 
     exit();  
 }
@@ -30,5 +35,3 @@ $main = getPage($product_name, $content, Header::Standard, Footer::Standard);
 setCSS($main, array('./assets/css/doll.css', './assets/css/header.css', './assets/css/footer.css'));
 
 echo $main; 
-
-

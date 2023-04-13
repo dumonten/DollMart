@@ -88,6 +88,7 @@
   }
   
   #_img_phone {
+    margin: 0 5px;
     color: white;
     font-weight: 700;
     font-size: 25px;
@@ -97,6 +98,7 @@
     color: white;
     text-decoration: none;
     font-weight: 700;
+    font-size: 25px;
   }
   
   .num:hover {
@@ -109,7 +111,7 @@
   
   .phone-text {
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
   }
   

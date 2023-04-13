@@ -1,46 +1,47 @@
 <?php
 
-const link = '<link rel="stylesheet" href={path-css}>';
-const mainTemplatePath = './prime_template.html';
-const headerPath = './content/header_content.html';
-const headerTopNavStandardPath = './content/header_topnav_standard.html';
-const headerTopNavAuthPath = './content/header_topnav_authorization.html';
-const footerPath = './content/footer_content.html';
+define('LINK',                           '<link rel="stylesheet" href={path-css}>');
+define('MAIN_TEMPLATE_PATH',             './content/prime_template.html');
+define('HEADER_PATH',                    './content/header_content.html');
+define('HEADER_TOPNAV_STANDARD_PATH',    './content/header_topnav_standard.html');
+define('HEADER_TOPNAVAUTH_PATH',         './content/header_topnav_authorization.html');
+define('HEADER_TOPNAV_BASKET_PATH',      './content/header_topnav_basket.html');
+define('FOOTER_PATH',                    './content/footer_content.html');
 
-enum Header
-{
+/*Possible types of header*/
+enum Header {
     case Standard;
     case Authorization;
+    case Basket;
     case None;
 }
 
-enum Footer
-{
+/*Possible types of footer*/
+enum Footer {
     case Standard;
     case None;
 }
 
-function getStylesheetDefinitions($paths)
-{
+function getStylesheetDefinitions($paths) {
     $links = array();
     foreach($paths as $path)
-        $links[] = str_replace('{path-css}', $path, link);
+        $links[] = str_replace('{path-css}', $path, LINK);
     return implode(" ", $links);
 }
-function getPage($title, $content, $headerType, $footerType)
-{
-    $main = file_get_contents(mainTemplatePath);
+
+function getPage($title, $content, $headerType, $footerType) {
+    $main = file_get_contents(MAIN_TEMPLATE_PATH);
 
     $header = $topnav_content = "";
     switch ($headerType)
     {
         case Header::Standard:
-            $header  = file_get_contents(headerPath);
-            $topnav_content = file_get_contents(headerTopNavStandardPath);
+            $header  = file_get_contents(HEADER_PATH);
+            $topnav_content = file_get_contents(HEADER_TOPNAV_STANDARD_PATH);
             break;
         case Header::Authorization:
-            $header  = file_get_contents(headerPath);
-            $topnav_content = file_get_contents(headerTopNavAuthPath);
+            $header  = file_get_contents(HEADER_PATH);
+            $topnav_content = file_get_contents(HEADER_TOPNAVAUTH_PATH);
             break;
         case Header::None:
             break;
@@ -51,7 +52,7 @@ function getPage($title, $content, $headerType, $footerType)
     switch ($footerType)
     {
         case Footer::Standard:
-            $footer  = file_get_contents(footerPath);
+            $footer  = file_get_contents(FOOTER_PATH);
             break;
         case Footer::None:
             break;
@@ -65,26 +66,7 @@ function getPage($title, $content, $headerType, $footerType)
     return $main;
 }
 
-function setCSS(&$page, $css_paths)
-{
+function setCSS(&$page, $css_paths) {
     $stylesheets_adding = getStylesheetDefinitions($css_paths);
     $page = str_replace('{stylesheets_adding}', $stylesheets_adding, $page);
-}
-
-function setProductItem($product_photo_path, $product_item_value, $product_item_name, $product_price)
-{
-    $main = file_get_contents("./content/product_item.html");
-    $main = str_replace('{product-photo-path}',   $product_photo_path, $main);
-    $main = str_replace('{product-item-value}',   $product_item_value, $main);
-    $main = str_replace('{product-item-name}',    $product_item_name,  $main);
-    $main = str_replace('{product-price}',        $product_price,      $main);
-    return $main;
-}
-
-function setCollectionItem($collection_name, $collection_photo_path)
-{
-    $main = file_get_contents("./content/collection_item.html");
-    $main = str_replace('{collection-name}',         $collection_name,       $main);
-    $main = str_replace('{collection-photo-path}',   $collection_photo_path, $main);
-    return $main;
 }
