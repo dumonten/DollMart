@@ -18,7 +18,7 @@ if (!empty($_POST)) {
             $sth->execute();
             
             $data = $sth->fetch(PDO::FETCH_ASSOC);
-            if($$data and $data['User password'] == hash("sha256", $password)) {
+            if($data and $data['User password'] == hash("sha256", $password)) {
                 $uhash = hash("sha256", rand(10e5, 10e10));
                 
                 $sth = $dbh->prepare("UPDATE `usersInformation` SET `User hash` = :uhash WHERE `User email` = :email");

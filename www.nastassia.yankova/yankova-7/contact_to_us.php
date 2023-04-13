@@ -1,15 +1,14 @@
 <?php
 
 include 'functions.php';
+include './phpmailer/Exception.php'; 
+include './phpmailer/PHPMailer.php'; 
+include './phpmailer/SMTP.php';
 
 //Import PHPMailer classes into the global namespace
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-
-include './phpmailer/Exception.php'; 
-include './phpmailer/PHPMailer.php'; 
-include './phpmailer/SMTP.php';
 
 if (isset($_POST['message']))
 {

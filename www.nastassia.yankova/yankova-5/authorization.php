@@ -15,7 +15,6 @@ if (!empty($_POST)) {
     } else if ($_POST['flag'] == "register") {
         $text = $_POST['text'];
         if (isValidateText($text) && isValidateEmail($email) && $password != "") {
-            sendMessage("You are registred.");
             try {
                 $dbh = connectToDb('mysql:host=localhost;dbname=dolls', 'root',  '0001'); 
                 if (!$dbh) exit();
@@ -29,7 +28,7 @@ if (!empty($_POST)) {
                 echo $e->getMessage(); 
                 exit();  
             }
-
+            sendMessage("You are registred.");
         } else {
             sendMessage("WRONG DATA!");
         }
